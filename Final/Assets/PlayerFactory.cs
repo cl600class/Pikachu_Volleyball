@@ -4,9 +4,8 @@ using UnityEngine;
 using Core;
 
 public class PlayerFactory : MonoBehaviour {
-    public static GameObject 皮卡丘 { get; private set; }
 
-    public static player1 Create_player1(int charctorNo)
+    /*public static player1 Create_player1(int charctorNo)
     {
         switch (charctorNo)
         {
@@ -17,10 +16,21 @@ public class PlayerFactory : MonoBehaviour {
             default:
                 return new pikachu();
         }
+    }*/
+    public static GameObject Create_player1_obj(int charctorNo)
+    {
+        switch (charctorNo)
+        {
+            case 1:
+                return Resources.Load("pikachu") as GameObject;
+            case 2:
+                return Resources.Load("xiwinnie") as GameObject;
+            default:
+                return Resources.Load("pikachu") as GameObject;
+        }
     }
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame

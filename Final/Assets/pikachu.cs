@@ -15,6 +15,7 @@ public class pikachu : player1{
         //this.垂直速度 = 0;
          this.距離 = 0.1f;
         this.反彈力 = 100f;
+        this.前端位移 = 0.9f;
         this.玩家 = GetComponent<Rigidbody2D>();
         //this.grounded = true;
         //this.groundCheck = groundCheck;

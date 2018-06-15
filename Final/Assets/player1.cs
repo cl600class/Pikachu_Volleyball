@@ -18,6 +18,7 @@ public class player1 : MonoBehaviour ,IMoveable{
     public float 距離;
     public LayerMask groundLayer;
     public float 反彈力;
+    public float 前端位移;
 
     // Use this for initialization
     void Start()
@@ -45,7 +46,7 @@ public class player1 : MonoBehaviour ,IMoveable{
         //水平方向 = Input.GetAxis("Horizontal");
         this.水平方向 = GetDirection(Input.GetKey(KeyCode.D), Input.GetKey(KeyCode.A));
         this.垂直速度 = this.玩家.velocity.y;
-        if (this.玩家.position.x > -1.1f)
+        if (this.玩家.position.x + this.前端位移 > -0.2f)
         {
             this.玩家.AddForce(new Vector2(-this.反彈力, 0));
         }
