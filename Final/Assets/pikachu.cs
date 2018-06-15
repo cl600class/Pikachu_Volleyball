@@ -4,7 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pikachu : player1{
-    public float 最大水平速度;
+    public pikachu()
+    {
+        this.name = "皮卡丘";
+        this.最大水平速度 = 10f;
+        this.水平推力 = 48f;
+        this.垂直推力 = 1250f;
+        //this.水平速度 = 0;
+        this.水平方向 = 1f;
+        //this.垂直速度 = 0;
+         this.距離 = 0.1f;
+        this.反彈力 = 100f;
+        this.玩家 = GetComponent<Rigidbody2D>();
+        //this.grounded = true;
+        //this.groundCheck = groundCheck;
+
+        //this.groundLayer = groundLayer;
+    }
+    /*public float 最大水平速度;
     public float 水平推力;
     public float 垂直推力;
     public float 水平速度;
@@ -15,19 +32,19 @@ public class pikachu : player1{
     public Transform groundCheck;
     public float 距離;
     public LayerMask groundLayer;
-
+    */
     // Use this for initialization
     void Start () {
-        最大水平速度 = 10f;
-        水平推力 = 48f;
-        垂直推力 = 1250f;
-        距離 = 0.1f;
-        玩家 = GetComponent<Rigidbody2D>();
+        //最大水平速度 = 10f;
+        //水平推力 = 48f;
+        //垂直推力 = 1250f;
+        //距離 = 0.1f;
+        //this.玩家 = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        移動();
+        //移動();
 	}
     public void 移動()
     {
@@ -67,7 +84,7 @@ public class pikachu : player1{
     {
         get
         {
-            return Input.GetKeyDown(KeyCode.Space);
+            return Input.GetKeyDown(KeyCode.W);
         }
     }
 }

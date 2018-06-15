@@ -4,6 +4,7 @@ using UnityEngine;
 using Core;
 
 public class PlayerFactory : MonoBehaviour {
+    public static GameObject 皮卡丘 { get; private set; }
 
     public static player1 Create_player1(int charctorNo)
     {
@@ -11,6 +12,8 @@ public class PlayerFactory : MonoBehaviour {
         {
             case 1:
                 return new pikachu();
+            case 2:
+                return new xiwinnie();
             default:
                 return new pikachu();
         }
