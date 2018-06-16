@@ -29,6 +29,17 @@ public class PlayerFactory : MonoBehaviour {
                 return Resources.Load("pikachu") as GameObject;
         }
     }
+
+   public static GameObject Create_player2_obj(int charactorNo)
+    {
+        switch (charactorNo)
+        {
+            case 1:
+                return Resources.Load("pikachu_sym") as GameObject;
+            default:
+                return Resources.Load("pikachu_sym") as GameObject;
+        }
+    }
 	// Use this for initialization
 	void Start () {
 	}

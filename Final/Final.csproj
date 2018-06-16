@@ -223,9 +223,12 @@
     <Compile Include="Assets\GameControl.cs" />
     <Compile Include="Assets\IMoveable.cs" />
     <Compile Include="Assets\pikachu.cs" />
+    <Compile Include="Assets\pikachu_sym.cs" />
     <Compile Include="Assets\player1.cs" />
+    <Compile Include="Assets\player2.cs" />
     <Compile Include="Assets\PlayerFactory.cs" />
     <Compile Include="Assets\xiwinnie.cs" />
+    <Compile Include="Assets\xiwinnie_sym.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
