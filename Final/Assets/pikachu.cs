@@ -14,7 +14,7 @@ public class pikachu : player1{
         this.水平方向 = 1f;
         //this.垂直速度 = 0;
          this.距離 = 0.1f;
-        this.反彈力 = 100f;
+        this.反彈力 = 110f;
         this.前端位移 = 0.9f;
         this.玩家 = GetComponent<Rigidbody2D>();
         //this.grounded = true;
@@ -22,30 +22,13 @@ public class pikachu : player1{
 
         //this.groundLayer = groundLayer;
     }
-    /*public float 最大水平速度;
-    public float 水平推力;
-    public float 垂直推力;
-    public float 水平速度;
-    public float 水平方向;
-    public float 垂直速度;
-    public Rigidbody2D 玩家;
-    public bool grounded;
-    public Transform groundCheck;
-    public float 距離;
-    public LayerMask groundLayer;
-    */
+
     // Use this for initialization
     void Start () {
-        //最大水平速度 = 10f;
-        //水平推力 = 48f;
-        //垂直推力 = 1250f;
-        //距離 = 0.1f;
-        //this.玩家 = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //移動();
 	}
     public void 移動()
     {

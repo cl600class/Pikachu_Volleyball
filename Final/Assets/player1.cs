@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player1 : MonoBehaviour ,IMoveable{
-
     public string name;
     public float 最大水平速度;
     public float 水平推力;
@@ -42,8 +41,9 @@ public class player1 : MonoBehaviour ,IMoveable{
 
     public void 移動()
     {
-        this.水平速度 = Mathf.Clamp(this.玩家.velocity.x, -this.最大水平速度, this.最大水平速度);
-        //水平方向 = Input.GetAxis("Horizontal");
+        this.水平速度 = this.玩家.velocity.x;
+        if (!(是地板 && Input.GetKey(KeyCode.Space)))
+            this.水平速度 = Mathf.Clamp(this.水平速度, -this.最大水平速度, this.最大水平速度);
         this.水平方向 = GetDirection(Input.GetKey(KeyCode.D), Input.GetKey(KeyCode.A));
         this.垂直速度 = this.玩家.velocity.y;
         if (this.玩家.position.x + this.前端位移 > -0.2f)

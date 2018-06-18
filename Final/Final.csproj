@@ -220,6 +220,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ball.cs" />
+    <Compile Include="Assets\collide_check.cs" />
     <Compile Include="Assets\GameControl.cs" />
     <Compile Include="Assets\IMoveable.cs" />
     <Compile Include="Assets\pikachu.cs" />

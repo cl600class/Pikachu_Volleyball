@@ -4,29 +4,20 @@ using UnityEngine;
 using Core;
 
 public class PlayerFactory : MonoBehaviour {
-
-    /*public static player1 Create_player1(int charctorNo)
+    private static GameObject Load_from_Resources(string player_name)
     {
-        switch (charctorNo)
-        {
-            case 1:
-                return new pikachu();
-            case 2:
-                return new xiwinnie();
-            default:
-                return new pikachu();
-        }
-    }*/
+        return Resources.Load(player_name) as GameObject;
+    }
     public static GameObject Create_player1_obj(int charctorNo)
     {
         switch (charctorNo)
         {
             case 1:
-                return Resources.Load("pikachu") as GameObject;
+                return Load_from_Resources("pikachu");
             case 2:
-                return Resources.Load("xiwinnie") as GameObject;
+                return Load_from_Resources("xiwinnie");
             default:
-                return Resources.Load("pikachu") as GameObject;
+                return Load_from_Resources("pikachu");
         }
     }
 
@@ -35,9 +26,9 @@ public class PlayerFactory : MonoBehaviour {
         switch (charactorNo)
         {
             case 1:
-                return Resources.Load("pikachu_sym") as GameObject;
+                return Load_from_Resources("pikachu_sym");
             default:
-                return Resources.Load("pikachu_sym") as GameObject;
+                return Load_from_Resources("pikachu_sym");
         }
     }
 	// Use this for initialization

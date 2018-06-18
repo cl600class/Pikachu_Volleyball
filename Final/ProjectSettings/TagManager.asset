@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - pikachu
+  - player1
+  - player2
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

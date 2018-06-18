@@ -9,51 +9,16 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1759353234723576}
+  m_RootGameObject: {fileID: 1925206624410294}
   m_IsPrefabParent: 1
---- !u!1 &1759353234723576
+--- !u!1 &1061022081045158
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4640563542549192}
-  - component: {fileID: 212878896124544386}
-  - component: {fileID: 50027255284305116}
-  - component: {fileID: 114564159126425476}
-  - component: {fileID: 114106933307068490}
-  - component: {fileID: 68098603779388170}
-  m_Layer: 0
-  m_Name: pikachu
-  m_TagString: pikachu
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1910016955972096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4433051492449076}
-  m_Layer: 0
-  m_Name: groundcheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 7707008975528953803, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1956906554718456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4126246345911154}
+  - component: {fileID: 4671568032423740}
   m_Layer: 0
   m_Name: boundary
   m_TagString: Untagged
@@ -61,54 +26,89 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4126246345911154
+--- !u!1 &1879560192577918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4844175139087458}
+  m_Layer: 0
+  m_Name: groundcheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 7707008975528953803, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1925206624410294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4627240284842310}
+  - component: {fileID: 212492777358977944}
+  - component: {fileID: 50018407440452596}
+  - component: {fileID: 114658893146066114}
+  - component: {fileID: 114138796144492948}
+  - component: {fileID: 68281972448061952}
+  m_Layer: 9
+  m_Name: pikachu
+  m_TagString: player1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4627240284842310
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1956906554718456}
+  m_GameObject: {fileID: 1925206624410294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.3594604, y: -1.101813, z: 0.0390625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4844175139087458}
+  - {fileID: 4671568032423740}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4671568032423740
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1061022081045158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4640563542549192}
+  m_Father: {fileID: 4627240284842310}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4433051492449076
+--- !u!4 &4844175139087458
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1910016955972096}
+  m_GameObject: {fileID: 1879560192577918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4640563542549192}
+  m_Father: {fileID: 4627240284842310}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4640563542549192
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759353234723576}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.11, y: 1.1, z: 0.0390625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4433051492449076}
-  - {fileID: 4126246345911154}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50027255284305116
+--- !u!50 &50018407440452596
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759353234723576}
+  m_GameObject: {fileID: 1925206624410294}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -120,14 +120,14 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
---- !u!68 &68098603779388170
+--- !u!68 &68281972448061952
 EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759353234723576}
+  m_GameObject: {fileID: 1925206624410294}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -170,26 +170,29 @@ EdgeCollider2D:
   - {x: -1.0192661, y: 0.68486863}
   - {x: -0.5427685, y: 0.28924835}
   - {x: -0.22708845, y: 0.17354262}
---- !u!114 &114106933307068490
+--- !u!114 &114138796144492948
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759353234723576}
+  m_GameObject: {fileID: 1925206624410294}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f55665b2bf4935749ae65dd58abdc658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  new_player1: {fileID: 114564159126425476}
+  new_player1: {fileID: 114658893146066114}
+  new_player2: {fileID: 0}
   player1_obj: {fileID: 0}
-  "\u540D\u5B57": 
---- !u!114 &114564159126425476
+  player2_obj: {fileID: 0}
+  "player1\u7684\u540D\u5B57": 
+  "player2\u7684\u540D\u5B57": 
+--- !u!114 &114658893146066114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759353234723576}
+  m_GameObject: {fileID: 1925206624410294}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fe2309e2713ce247b60641ae5fb4ef1, type: 3}
@@ -200,23 +203,23 @@ MonoBehaviour:
   "\u6C34\u5E73\u63A8\u529B": 48
   "\u5782\u76F4\u63A8\u529B": 1250
   "\u6C34\u5E73\u901F\u5EA6": 0
-  "\u6C34\u5E73\u65B9\u5411": 0
+  "\u6C34\u5E73\u65B9\u5411": 1
   "\u5782\u76F4\u901F\u5EA6": 0
-  "\u73A9\u5BB6": {fileID: 50027255284305116}
+  "\u73A9\u5BB6": {fileID: 50018407440452596}
   grounded: 0
-  groundCheck: {fileID: 4433051492449076}
+  groundCheck: {fileID: 4844175139087458}
   "\u8DDD\u96E2": 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  "\u53CD\u5F48\u529B": 100
+  "\u53CD\u5F48\u529B": 110
   "\u524D\u7AEF\u4F4D\u79FB": 0.9
---- !u!212 &212878896124544386
+--- !u!212 &212492777358977944
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1759353234723576}
+  m_GameObject: {fileID: 1925206624410294}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
