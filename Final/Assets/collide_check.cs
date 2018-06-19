@@ -10,7 +10,11 @@ public class collide_check : MonoBehaviour {
     {
         誰碰到球 = collision.gameObject.tag;
         if (誰碰到球 == "player1" || 誰碰到球 == "player2" || 誰碰到球 == "ground")
+        {
             touched = true;
+            if (誰碰到球 == "ground")
+                GameControl.Instance.AddScore();
+        }
         else touched = false;
     }
     // Use this for initialization

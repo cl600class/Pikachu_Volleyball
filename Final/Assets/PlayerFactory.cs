@@ -3,32 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core;
 
-public class PlayerFactory : MonoBehaviour {
-    private static GameObject Load_from_Resources(string player_name)
-    {
-        return Resources.Load(player_name) as GameObject;
-    }
-    public static GameObject Create_player1_obj(int charctorNo)
+public class PlayerFactory {
+
+    public static string Create_player1_obj(int charctorNo)
     {
         switch (charctorNo)
         {
             case 1:
-                return Load_from_Resources("pikachu");
+                return "pikachu";
             case 2:
-                return Load_from_Resources("xiwinnie");
+                return "xiwinnie";
             default:
-                return Load_from_Resources("pikachu");
+                return "pikachu";
         }
     }
 
-   public static GameObject Create_player2_obj(int charactorNo)
+   public static string Create_player2_obj(int charactorNo)
     {
         switch (charactorNo)
         {
             case 1:
-                return Load_from_Resources("pikachu_sym");
+                return "pikachu_sym";
             default:
-                return Load_from_Resources("pikachu_sym");
+                return "pikachu_sym";
         }
     }
 	// Use this for initialization

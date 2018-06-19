@@ -182,14 +182,19 @@ MonoBehaviour:
   "\u6C34\u5E73\u65B9\u5411": 1
   "\u5782\u76F4\u901F\u5EA6": 0
   "\u73A9\u5BB6": {fileID: 50352612914766242}
+  "\u8DDD\u96E2": 0.1
   grounded: 0
   groundCheck: {fileID: 4780106587731796}
-  "\u8DDD\u96E2": 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  "\u53CD\u5F48\u529B": 100
+  "\u53CD\u5F48\u529B": 110
   "\u524D\u7AEF\u4F4D\u79FB": 0.9
+  "\u5DE6\u9375": 276
+  "\u53F3\u9375": 275
+  "\u8DF3\u9375": 273
+  "\u4E0B\u9375": 274
+  "\u52A0\u901F\u53CA\u6BBA\u7403\u9375": 44
 --- !u!212 &212443862273101506
 SpriteRenderer:
   m_ObjectHideFlags: 1
