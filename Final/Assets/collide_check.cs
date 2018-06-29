@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core;
 public class collide_check : MonoBehaviour {
-    public static bool touched;
     public static string 誰碰到球;
+    public static bool touched;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,13 +17,4 @@ public class collide_check : MonoBehaviour {
         }
         else touched = false;
     }
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

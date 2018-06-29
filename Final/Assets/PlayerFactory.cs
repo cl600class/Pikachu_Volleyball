@@ -24,6 +24,8 @@ public class PlayerFactory {
         {
             case 1:
                 return "pikachu_sym";
+            case 2:
+                return "xiwinnie_sym";
             default:
                 return "pikachu_sym";
         }
@@ -36,6 +38,4 @@ public class PlayerFactory {
 	void Update () {
 		
 	}
-
-
 }

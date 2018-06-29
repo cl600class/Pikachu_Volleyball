@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core;
 
-public class ball : MonoBehaviour, IMoveable {
+public class Ball : MonoBehaviour, IMoveable {
     public Rigidbody2D 球;
     public float 目前水平速度;
     public float 目前垂直速度;
@@ -11,37 +11,28 @@ public class ball : MonoBehaviour, IMoveable {
     public float 目前速率;
     public Vector2 調整後速度;
     public float 調整後速率;
-    public const float 最小速度 = 8f;
-    public const float 最大速度 = 18f;
-    public static float 水平位置; 
+    public float 最小速度;
+    public float 最大速度;
+    public float 水平位置;
     public bool touched;
     public string 誰碰到球;
+    public static Ball Instance;
 
-    // Use this for initialization
-    void Start () {
-        球 = GetComponent<Rigidbody2D>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        誰碰到球 = collide_check.誰碰到球;
-        touched = collide_check.touched;
-        水平位置 = 球.position.x;
-        移動();
-	}
-
-    public void 移動()
+    public virtual void 移動()
     {
-        目前水平速度 = 球.velocity.x;
-        目前垂直速度 = 球.velocity.y;
-        目前速率 = 球.velocity.magnitude;
-        目前速度 = 球.velocity.normalized;
-        調整後速率 = Mathf.Clamp(目前速率, 最小速度, 最大速度);
-        調整後速度 = 目前速度 * 調整後速率;
-        球.velocity = 調整後速度;
+
     }
-    public static float GetHorizontalPosition()
+
+    public void 檢查碰撞()
     {
-        return 水平位置;
+        this.touched = collide_check.touched;
+        this.誰碰到球 = collide_check.誰碰到球;
+    }
+    public void 殺球偵測()
+    {
+        if (this.touched && (this.誰碰到球 != "ground"))
+        {
+            this.殺球(this, this.誰碰到球, GameControl.Instance.new_player1, GameControl.Instance.new_player2);
+        }
     }
 }

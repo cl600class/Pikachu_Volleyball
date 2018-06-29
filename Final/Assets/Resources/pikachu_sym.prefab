@@ -174,9 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1661a669024fcaf4a889503c12772d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u76AE\u5361\u4E18"
+  "\u540D\u5B57": "\u76AE\u5361\u4E18"
   "\u6700\u5927\u6C34\u5E73\u901F\u5EA6": 10
-  "\u6C34\u5E73\u63A8\u529B": 48
+  "\u6C34\u5E73\u63A8\u529B": 55
   "\u5782\u76F4\u63A8\u529B": 1250
   "\u6C34\u5E73\u901F\u5EA6": 0
   "\u6C34\u5E73\u65B9\u5411": 1

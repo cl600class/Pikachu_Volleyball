@@ -176,8 +176,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 413829867}
+  m_PlaneDistance: -10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1420,6 +1420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   new_player1: {fileID: 0}
   new_player2: {fileID: 0}
+  "\u6392\u7403": {fileID: 0}
+  "\u6392\u7403\u9810\u8A2D\u6700\u5927\u901F\u5EA6": 0
   player1_obj: 
   player2_obj: 
   "player1\u7684\u540D\u5B57": 
@@ -1428,6 +1430,7 @@ MonoBehaviour:
   player2_text: {fileID: 912082203}
   player1_score: 0
   player2_score: 0
+  "\u904A\u6232\u9032\u884C\u4E2D": 0
 --- !u!1 &1682388943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,7 +1619,7 @@ GameObject:
   - component: {fileID: 1962444686}
   - component: {fileID: 1962444682}
   m_Layer: 0
-  m_Name: ball
+  m_Name: PokemonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1650,7 +1653,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.3
+  m_Mass: 0.25
   m_LinearDrag: 0
   m_AngularDrag: 0.2
   m_GravityScale: 2
@@ -1730,12 +1733,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b841dca167e78d47abec6fbd541c260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u7403": {fileID: 0}
+  "\u7403": {fileID: 1962444683}
   "\u76EE\u524D\u6C34\u5E73\u901F\u5EA6": 0
   "\u76EE\u524D\u5782\u76F4\u901F\u5EA6": 0
   "\u76EE\u524D\u901F\u5EA6": {x: 0, y: 0}
   "\u76EE\u524D\u901F\u7387": 0
   "\u8ABF\u6574\u5F8C\u901F\u5EA6": {x: 0, y: 0}
   "\u8ABF\u6574\u5F8C\u901F\u7387": 0
+  "\u6700\u5C0F\u901F\u5EA6": 10.5
+  "\u6700\u5927\u901F\u5EA6": 18
+  "\u6C34\u5E73\u4F4D\u7F6E": 0
   touched: 0
   "\u8AB0\u78B0\u5230\u7403": 

@@ -183,10 +183,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   new_player1: {fileID: 114658893146066114}
   new_player2: {fileID: 0}
-  player1_obj: {fileID: 0}
-  player2_obj: {fileID: 0}
+  "\u6392\u7403": {fileID: 0}
+  "\u6392\u7403\u9810\u8A2D\u6700\u5927\u901F\u5EA6": 0
+  player1_obj: ','
+  player2_obj: 0
   "player1\u7684\u540D\u5B57": 
   "player2\u7684\u540D\u5B57": 
+  player1_text: {fileID: 0}
+  player2_text: {fileID: 0}
+  player1_score: 0
+  player2_score: 0
+  "\u904A\u6232\u9032\u884C\u4E2D": 0
 --- !u!114 &114658893146066114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,22 +205,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe2309e2713ce247b60641ae5fb4ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u76AE\u5361\u4E18"
+  "\u540D\u5B57": "\u76AE\u5361\u4E18"
   "\u6700\u5927\u6C34\u5E73\u901F\u5EA6": 10
-  "\u6C34\u5E73\u63A8\u529B": 48
+  "\u6C34\u5E73\u63A8\u529B": 55
   "\u5782\u76F4\u63A8\u529B": 1250
   "\u6C34\u5E73\u901F\u5EA6": 0
   "\u6C34\u5E73\u65B9\u5411": 1
   "\u5782\u76F4\u901F\u5EA6": 0
   "\u73A9\u5BB6": {fileID: 50018407440452596}
+  "\u8DDD\u96E2": 0.1
   grounded: 0
   groundCheck: {fileID: 4844175139087458}
-  "\u8DDD\u96E2": 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   "\u53CD\u5F48\u529B": 110
   "\u524D\u7AEF\u4F4D\u79FB": 0.9
+  "\u5DE6\u9375": 97
+  "\u53F3\u9375": 100
+  "\u8DF3\u9375": 119
+  "\u4E0B\u9375": 115
+  "\u52A0\u901F\u53CA\u6BBA\u7403\u9375": 32
 --- !u!212 &212492777358977944
 SpriteRenderer:
   m_ObjectHideFlags: 1

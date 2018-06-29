@@ -50,7 +50,7 @@ public class player : MonoBehaviour, IMoveable {
             return 0f;
     }
 
-    private bool 是地板
+    public bool 是地板
     {
         get
         {

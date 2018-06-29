@@ -7,7 +7,7 @@ public class xiwinnie : player1 {
     {
         this.名字 = "習維尼";
         this.最大水平速度 = 8f;
-        this.水平推力 = 50f;
+        this.水平推力 = 60f;
         this.垂直推力 = 1250f;
         this.水平方向 = 1f;
          this.距離 = 0.1f;

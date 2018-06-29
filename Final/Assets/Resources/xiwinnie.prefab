@@ -115,7 +115,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 4.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -176,9 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4afacd1deec1042b632d0871fdf6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u540D\u5B57": 
+  "\u540D\u5B57": "\u7FD2\u7DAD\u5C3C"
   "\u6700\u5927\u6C34\u5E73\u901F\u5EA6": 8
-  "\u6C34\u5E73\u63A8\u529B": 50
+  "\u6C34\u5E73\u63A8\u529B": 60
   "\u5782\u76F4\u63A8\u529B": 1250
   "\u6C34\u5E73\u901F\u5EA6": 0
   "\u6C34\u5E73\u65B9\u5411": 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  "\u53CD\u5F48\u529B": 102
+  "\u53CD\u5F48\u529B": 115
   "\u524D\u7AEF\u4F4D\u79FB": 0.55
   "\u5DE6\u9375": 97
   "\u53F3\u9375": 100
