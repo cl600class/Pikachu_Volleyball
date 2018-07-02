@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class xiwinnie : player1 {
-    public xiwinnie()
+public class Xiwinnie : Player1 {
+    public Xiwinnie()
     {
         this.名字 = "習維尼";
         this.最大水平速度 = 8f;
@@ -13,6 +13,5 @@ public class xiwinnie : player1 {
          this.距離 = 0.1f;
         this.反彈力 = 115f;
         this.前端位移 = 0.55f;
-        //this.玩家 = GetComponent<Rigidbody2D>();
     }
 }

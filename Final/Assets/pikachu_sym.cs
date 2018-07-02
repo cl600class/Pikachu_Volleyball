@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pikachu_sym : player2{
-    public pikachu_sym()
+public class Pikachu_sym : Player2{
+    public Pikachu_sym()
     {
         this.名字 = "皮卡丘";
         this.最大水平速度 = 10f;
@@ -14,6 +14,5 @@ public class pikachu_sym : player2{
          this.距離 = 0.1f;
         this.反彈力 = 110f;
         this.前端位移 = 0.9f;
-        //this.玩家 = GetComponent<Rigidbody2D>();
     }
 }

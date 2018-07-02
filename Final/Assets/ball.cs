@@ -16,7 +16,6 @@ public class Ball : MonoBehaviour, IMoveable {
     public float 水平位置;
     public bool touched;
     public string 誰碰到球;
-    public static Ball Instance;
 
     public virtual void 移動()
     {
@@ -25,14 +24,12 @@ public class Ball : MonoBehaviour, IMoveable {
 
     public void 檢查碰撞()
     {
-        this.touched = collide_check.touched;
-        this.誰碰到球 = collide_check.誰碰到球;
+        this.touched = Collide_check.Instance.touched;
+        this.誰碰到球 = Collide_check.Instance.誰碰到球;
     }
-    public void 殺球偵測()
+
+    public bool 檢查得分()
     {
-        if (this.touched && (this.誰碰到球 != "ground"))
-        {
-            this.殺球(this, this.誰碰到球, GameControl.Instance.new_player1, GameControl.Instance.new_player2);
-        }
+        return Collide_check.Instance.得分&&(this.球.position.y<0);
     }
 }

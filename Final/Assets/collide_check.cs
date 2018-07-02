@@ -2,19 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Core;
-public class collide_check : MonoBehaviour {
-    public static string 誰碰到球;
-    public static bool touched;
+public class Collide_check : MonoBehaviour {
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public string 誰碰到球;
+    public bool touched;
+    public bool 得分;
+    public static Collide_check Instance;
+
+    public void OnTriggerEnter2D(Collider2D Collision)
     {
-        誰碰到球 = collision.gameObject.tag;
+        誰碰到球 = Collision.gameObject.tag;
         if (誰碰到球 == "player1" || 誰碰到球 == "player2" || 誰碰到球 == "ground")
         {
             touched = true;
             if (誰碰到球 == "ground")
-                GameControl.Instance.AddScore();
+            {
+                得分 = true;
+            }
         }
-        else touched = false;
+        else
+        {
+            touched = false;
+            得分 = false;
+        }
+    }
+
+    void Start()
+    {
+        Instance = this;
+        誰碰到球 = null;
+        得分 = false;
     }
 }

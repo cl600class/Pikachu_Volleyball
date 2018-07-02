@@ -51,9 +51,9 @@ GameObject:
   - component: {fileID: 4627240284842310}
   - component: {fileID: 212492777358977944}
   - component: {fileID: 50018407440452596}
-  - component: {fileID: 114658893146066114}
   - component: {fileID: 114138796144492948}
   - component: {fileID: 68281972448061952}
+  - component: {fileID: 114206686037331584}
   m_Layer: 9
   m_Name: pikachu
   m_TagString: player1
@@ -181,20 +181,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55665b2bf4935749ae65dd58abdc658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  new_player1: {fileID: 114658893146066114}
-  new_player2: {fileID: 0}
+  New_player1: {fileID: 0}
+  New_player2: {fileID: 0}
   "\u6392\u7403": {fileID: 0}
   "\u6392\u7403\u9810\u8A2D\u6700\u5927\u901F\u5EA6": 0
-  player1_obj: ','
-  player2_obj: 0
-  "player1\u7684\u540D\u5B57": 
-  "player2\u7684\u540D\u5B57": 
-  player1_text: {fileID: 0}
-  player2_text: {fileID: 0}
-  player1_score: 0
-  player2_score: 0
-  "\u904A\u6232\u9032\u884C\u4E2D": 0
---- !u!114 &114658893146066114
+  "Player1\u7684\u540D\u5B57": 
+  "Player2\u7684\u540D\u5B57": 
+  Player1_text: {fileID: 0}
+  Player2_text: {fileID: 0}
+  "\u53EF\u5F97\u5206": 0
+--- !u!114 &114206686037331584
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

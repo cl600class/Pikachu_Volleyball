@@ -1,100 +1,128 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Ball" Collapsed="true">
-    <Position X="4.75" Y="4.5" Width="1.5" />
+    <Position X="14" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AggAAABgAAAAMAAAAAgEAAAAAIERACACQAAIAAAAAAA=</HashCode>
+      <HashCode>AggAAAJgAAAAMAAAAAgEAAAAAIEBACACAAAIAAAAAAA=</HashCode>
       <FileName>Assets\Ball.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="collide_check" Collapsed="true">
-    <Position X="14" Y="0.75" Width="1.5" />
+  <Class Name="BallFactory" Collapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAEABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\collide_check.cs</FileName>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\BallFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collide_check" Collapsed="true">
+    <Position X="25.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAAAAAAAAAAAIAAEABAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Collide_check.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GameControl" Collapsed="true">
-    <Position X="16" Y="0.5" Width="1.5" />
+    <Position X="27" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAQAABCABiCAwAAAwAAAgAAAAAAQQCABQAAAAAAAAAA=</HashCode>
+      <HashCode>sIQAwAAAACAQQJAAQAAAAAAABAAAxCAAUAAAAKAAAAA=</HashCode>
       <FileName>Assets\GameControl.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MovementExtension" Collapsed="true">
-    <Position X="14.25" Y="3" Width="1.5" />
+  <Class Name="GameOver" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAQAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\GameOver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu" Collapsed="true">
+    <Position X="25.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAEAAAACAAAAAAkBAgAAAAAAgAAAAACA=</HashCode>
+      <FileName>Assets\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovementExtension" Collapsed="true">
+    <Position X="27" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAEAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Assets\MovementExtension.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="pikachu" Collapsed="true">
-    <Position X="9.5" Y="3.25" Width="1.5" />
+  <Class Name="Pikachu" Collapsed="true">
+    <Position X="16.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\pikachu.cs</FileName>
+      <FileName>Assets\Pikachu.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="pikachu_sym" Collapsed="true">
-    <Position X="7.25" Y="3.25" Width="1.5" />
+  <Class Name="Pikachu_sym" Collapsed="true">
+    <Position X="21" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\pikachu_sym.cs</FileName>
+      <FileName>Assets\Pikachu_sym.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="player" Collapsed="true">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+  <Class Name="Player" Collapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gEQAAAgAACAIgAgQwAAECCAIQwEAIABIAAAAQAACAAA=</HashCode>
-      <FileName>Assets\player.cs</FileName>
+      <FileName>Assets\Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="player1" Collapsed="true">
-    <Position X="10.5" Y="2" Width="1.5" />
+  <Class Name="Player1" Collapsed="true">
+    <Position X="15.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\player1.cs</FileName>
+      <FileName>Assets\Player1.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="player2" Collapsed="true">
-    <Position X="6" Y="2" Width="1.5" />
+  <Class Name="Player2" Collapsed="true">
+    <Position X="19.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\player2.cs</FileName>
+      <FileName>Assets\Player2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerFactory" Collapsed="true">
-    <Position X="16.25" Y="2.5" Width="1.5" />
+    <Position X="23.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Assets\PlayerFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PokemonBall" Collapsed="true">
-    <Position X="4.75" Y="6" Width="1.5" />
+    <Position X="14" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\PokemonBall.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="xiwinnie" Collapsed="true">
-    <Position X="11.75" Y="3.25" Width="1.5" />
+  <Class Name="ScreenResolution" Collapsed="true">
+    <Position X="25.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\xiwinnie.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\ScreenResolution.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="xiwinnie_sym" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
+  <Class Name="Xiwinnie" Collapsed="true">
+    <Position X="14.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\xiwinnie_sym.cs</FileName>
+      <FileName>Assets\Xiwinnie.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Core.IMoveable">
-    <Position X="14" Y="4.5" Width="1.5" />
+  <Class Name="Xiwinnie_sym" Collapsed="true">
+    <Position X="18.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Xiwinnie_sym.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Core.IMoveable" Collapsed="true">
+    <Position X="23.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\IMoveable.cs</FileName>

@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4835961567174794}
   - component: {fileID: 212788802134325388}
   - component: {fileID: 50352612914766242}
-  - component: {fileID: 114149769736853602}
   - component: {fileID: 68400278177198276}
+  - component: {fileID: 114095141104405762}
   m_Layer: 0
   m_Name: pikachu_sym
   m_TagString: player2
@@ -163,7 +163,7 @@ EdgeCollider2D:
   - {x: 0.26866746, y: 0.570063}
   - {x: 0.31345868, y: 0.3053433}
   - {x: 1.0578454, y: 0.6450807}
---- !u!114 &114149769736853602
+--- !u!114 &114095141104405762
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

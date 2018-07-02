@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player1 : player{
+public class Player1 : Player{
 
-    public player1()
+    public Player1()
     {
         this.左鍵 = KeyCode.A;
         this.右鍵 = KeyCode.D;

@@ -3,42 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core;
 
-public static class MovementExtension{
+public static class MovementExtension {
 
-    public static void 殺球(this IMoveable 可移動的, Ball 目標球, string 誰碰到球, player1 player1, player2 player2)
+    public static Player player;
+
+    public static void 殺球控制(this IMoveable 可移動的, Ball 目標球, Player1 player1, Player2 player2)
     {
-        Vector2 方向;
-        Vector2 上殺球;
-        Vector2 平殺球;
-        Vector2 下殺球;
-        float 殺球力 = 40f;
-        player player;
-        if (誰碰到球 == "player1")
+        if (目標球.touched&&目標球.誰碰到球 != "ground")
         {
-            player = player1;
-            方向 = Vector2.right;
-            平殺球 = 方向;
-            上殺球 = Rotate(方向, 30);
-            下殺球 = Rotate(方向, -30);
-        }
-        else
-        {
-            player = player2;
-            方向 = Vector2.left;
-            平殺球 = 方向;
-            上殺球 = Rotate(方向, -30);
-            下殺球 = Rotate(方向, 30);
-        }
-        目標球.最大速度 = GameControl.Instance.排球預設最大速度;
-        if ((!(player.是地板)) && Input.GetKey(player.加速及殺球鍵))
-        {
-            目標球.最大速度 = 24f;
-            if (Input.GetKey(player.右鍵) || Input.GetKey(player.左鍵))
-                目標球.球.AddForce(殺球力 * 平殺球);
-            else if (Input.GetKey(player.跳鍵))
-                目標球.球.AddForce(殺球力 * 上殺球);
-            else if (Input.GetKey(player.下鍵))
-                目標球.球.AddForce(殺球力 * 下殺球);
+            Vector2 方向;
+            Vector2 上殺球;
+            Vector2 平殺球;
+            Vector2 下殺球;
+            float 殺球力 = 45f;
+            Player who;
+            
+            if (目標球.誰碰到球 == "player1")
+            {
+                who = player1;
+                方向 = Vector2.right;
+                平殺球 = 方向;
+                上殺球 = Rotate(方向, 30);
+                下殺球 = Rotate(方向, -45);
+            }
+            else
+            {
+                who = player2;
+                方向 = Vector2.left;
+                平殺球 = 方向;
+                上殺球 = Rotate(方向, -30);
+                下殺球 = Rotate(方向, 45);
+            }
+            if (player!=who)
+                目標球.最大速度 = GameControl.Instance.排球預設最大速度;
+            player = who;
+            if ((!(player.是地板)) && Input.GetKey(player.加速及殺球鍵))
+            {
+                目標球.最大速度 = 24f;
+                if (Input.GetKey(player.右鍵) || Input.GetKey(player.左鍵))
+                    目標球.球.AddForce(殺球力 * 平殺球);
+                else if (Input.GetKey(player.跳鍵))
+                    目標球.球.AddForce(殺球力 * 上殺球);
+                else if (Input.GetKey(player.下鍵))
+                    目標球.球.AddForce(殺球力 * 下殺球);
+            }
         }
     }
 

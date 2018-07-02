@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -222,20 +224,22 @@
   <ItemGroup>
     <Compile Include="Assets\Ball.cs" />
     <Compile Include="Assets\BallFactory.cs" />
-    <Compile Include="Assets\collide_check.cs" />
+    <Compile Include="Assets\Collide_check.cs" />
     <Compile Include="Assets\GameControl.cs" />
+    <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\IMoveable.cs" />
     <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\MovementExtension.cs" />
-    <Compile Include="Assets\pikachu.cs" />
-    <Compile Include="Assets\pikachu_sym.cs" />
-    <Compile Include="Assets\player.cs" />
-    <Compile Include="Assets\player1.cs" />
-    <Compile Include="Assets\player2.cs" />
+    <Compile Include="Assets\Pikachu.cs" />
+    <Compile Include="Assets\Pikachu_sym.cs" />
+    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Player1.cs" />
+    <Compile Include="Assets\Player2.cs" />
     <Compile Include="Assets\PlayerFactory.cs" />
     <Compile Include="Assets\PokemonBall.cs" />
-    <Compile Include="Assets\xiwinnie.cs" />
-    <Compile Include="Assets\xiwinnie_sym.cs" />
+    <Compile Include="Assets\ScreenResolution.cs" />
+    <Compile Include="Assets\Xiwinnie.cs" />
+    <Compile Include="Assets\Xiwinnie_sym.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ClassDiagram1.cd" />

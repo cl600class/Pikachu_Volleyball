@@ -7,85 +7,99 @@ using Core;
 using System;
 
 public class GameControl : MonoBehaviour {
-    public player1 new_player1;
-    public player2 new_player2;
+    public Player1 New_player1;
+    public Player2 New_player2;
     public Ball 排球;
     public float 排球預設最大速度;
-    public string player1_obj;
-    public string player2_obj;
-    public string player1的名字;
-    public string player2的名字;
-    public Text player1_text;
-    public Text player2_text;
-    public int player1_score = 0;
-    public int player2_score = 0;
+    public static string Player1_obj;
+    public static string Player2_obj;
+    public static string Ball_obj;
+    public string Player1的名字;
+    public string Player2的名字;
+    public Text Player1_text;
+    public Text Player2_text;
+    public bool 可得分;
+    public static int Player1_score;
+    public static int Player2_score;
     public static GameControl Instance;
-    public bool 遊戲進行中;
+    public static bool 遊戲進行中 = true;
 
     // Use this for initialization
     void Start () {
-        player1_obj = PlayerFactory.Create_player1_obj(Menu.charactorNo1);
-        Instantiate(Load_from_Resources(player1_obj), new Vector2(-6f, 0), new Quaternion());
-        new_player1 = FindObjectOfType<player1>();
-
-        player2_obj = PlayerFactory.Create_player2_obj(Menu.charactorNo2);
-        Instantiate(Load_from_Resources(player2_obj), new Vector2(6f, 0), new Quaternion());
-        new_player2 = FindObjectOfType<player2>();
-
+        Instantiate(Load_from_Resources(Ball_obj), new Vector2(-6f, 3f), new Quaternion());
         排球 = FindObjectOfType<Ball>();
         排球預設最大速度 = 排球.最大速度;
+
+        Instantiate(Load_from_Resources(Player1_obj), new Vector2(-6f, -1.5f), new Quaternion());
+        New_player1 = FindObjectOfType<Player1>();
+
+        Instantiate(Load_from_Resources(Player2_obj), new Vector2(6f, -1.5f), new Quaternion());
+        New_player2 = FindObjectOfType<Player2>();
+
+        Player1_text.text = Player1_score.ToString();
+        Player2_text.text = Player2_score.ToString();
         Instance = this;
-        遊戲進行中 = true;
+        可得分 = true;
 	}
+
 	// Update is called once per frame
 	void Update () {
-        if (player1_score >= 15 || player2_score >= 15)
+        if (遊戲進行中)
         {
-            遊戲進行中 = false;
+            New_player1.移動();
+            Player1的名字 = New_player1.名字;
+            New_player2.移動();
+            Player2的名字 = New_player2.名字;
+            if (排球.檢查得分() && 可得分)
+            {
+                加分();
+                遊戲進行中 = !結束了沒();
+                if (遊戲進行中)
+                {
+                    可得分 = false;
+                    Time.timeScale = 0.3f;
+                    StartCoroutine(重新載入());
+                }
+            }
         }
         else
         {
-            new_player1.移動();
-            player1的名字 = new_player1.名字;
-            new_player2.移動();
-            player2的名字 = new_player2.名字;
+            if (Input.GetKeyDown(KeyCode.Backspace))
+                SceneManager.LoadScene("GameOver");
         }
         排球.移動();
         排球.檢查碰撞();
-        排球.殺球偵測();
-       /* if (遊戲進行中&&排球.誰碰到球 == "ground")
-        {
-            排球.誰碰到球 = null;
-            SceneManager.LoadScene("Main");
-        }*/
-	}
-
-    void FixedUpdate() {
-        if(!Input.GetKey(KeyCode.Escape))
-            Screen.SetResolution(1540, 1130, true);
-        else
-            Screen.SetResolution(1131, 799, false);
-    }
-    private GameObject Load_from_Resources(string player_name)
-    {
-        return Resources.Load(player_name) as GameObject;
+        排球.殺球控制(排球, New_player1, New_player2);
     }
 
-    public void AddScore()
+    private GameObject Load_from_Resources(string object_name)
     {
-        if (遊戲進行中)
-        {
-            if (排球.水平位置 < 0)
-            {
-                player2_score += 1;
-                player2_text.text = ""+player2_score;
-            }
+        return Resources.Load(object_name) as GameObject;
+    }
 
-            else if (排球.水平位置 > 0)
-            {
-                player1_score += 1;
-                player1_text.text = "" + player1_score;
-            }
+    private bool 結束了沒()
+    {
+        return (Player1_score >= 15 || Player2_score >= 15);
+    }
+
+    private void 加分()
+    {
+        if (排球.水平位置 < 0)
+        {
+            Player2_score += 1;
+            Player2_text.text = Player2_score.ToString();
         }
-     }
+        else if (排球.水平位置 > 0)
+        {
+            Player1_score += 1;
+            Player1_text.text = Player1_score.ToString();
+        }
+    }
+
+    IEnumerator 重新載入()
+    {
+        yield return new WaitForSecondsRealtime(1.25f);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

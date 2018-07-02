@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player2 : player{
+public class Player2 : Player{
 
-    public player2()
+    public Player2()
     {
     this.左鍵 = KeyCode.LeftArrow;
     this.右鍵 = KeyCode.RightArrow;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core;
 
-public class player : MonoBehaviour, IMoveable {
+public class Player : MonoBehaviour, IMoveable {
     public string 名字;
     public float 最大水平速度;
     public float 水平推力;

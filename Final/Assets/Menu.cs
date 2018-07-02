@@ -8,20 +8,16 @@ public class Menu : MonoBehaviour {
     public GameObject Select_Player1;
     public GameObject Select_Player2;
     public GameObject click_to_start;
-    public static int charactorNo1 = 0;
-    public static int charactorNo2 = 0;
+    public static int charactorNo1;
+    public static int charactorNo2;
 	// Use this for initialization
 	void Start () {
         Select_Player2.SetActive(false);
         click_to_start.SetActive(false);
-	}
-    void FixedUpdate()
-    {
-        if (!Input.GetKey(KeyCode.Escape))
-            Screen.SetResolution(1540, 1130, true);
-        else
-            Screen.SetResolution(1131, 799, false);
+        charactorNo1 = 0;
+        charactorNo2 = 0;
     }
+
     // Update is called once per frame
     void Update () {
 		if (charactorNo1 != 0)
@@ -32,6 +28,7 @@ public class Menu : MonoBehaviour {
             {
                 Select_Player2.SetActive(false);
                 click_to_start.SetActive(true);
+                PreLoad();
             }
         }
 	}
@@ -39,7 +36,7 @@ public class Menu : MonoBehaviour {
     {
         SceneManager.LoadScene("Main");
     }
-    public void set_number_to1(GameObject 是誰)
+    public void Set_number_to1(GameObject 是誰)
     {
         if (是誰 == Select_Player1)
             charactorNo1 = 1;
@@ -47,11 +44,21 @@ public class Menu : MonoBehaviour {
             charactorNo2 = 1;
     }
 
-    public void set_number_to2(GameObject 是誰)
+    public void Set_number_to2(GameObject 是誰)
     {
         if (是誰 == Select_Player1)
             charactorNo1 = 2;
         else
             charactorNo2 = 2;
+    }
+
+    public void PreLoad()
+    {
+        GameControl.遊戲進行中 = true;
+        GameControl.Player1_score = 0;
+        GameControl.Player2_score = 0;
+        GameControl.Ball_obj = BallFactory.Create_ball(1);
+        GameControl.Player1_obj = PlayerFactory.Create_player1_obj(charactorNo1);
+        GameControl.Player2_obj = PlayerFactory.Create_player2_obj(charactorNo2);
     }
 }
