@@ -14,19 +14,22 @@ public class GameControl : MonoBehaviour {
     public static string Player1_obj;
     public static string Player2_obj;
     public static string Ball_obj;
-    public string Player1的名字;
-    public string Player2的名字;
     public Text Player1_text;
     public Text Player2_text;
+    public Text 結束顯示文字;
+    public DisplayWord 顯示文字 = new ToDisplay();
+    public GameObject 遊戲結束;
     public bool 可得分;
     public static int Player1_score;
     public static int Player2_score;
     public static GameControl Instance;
-    public static bool 遊戲進行中 = true;
+    public static bool 遊戲進行中;
+    public static bool Player1有球權;
 
     // Use this for initialization
     void Start () {
-        Instantiate(Load_from_Resources(Ball_obj), new Vector2(-6f, 3f), new Quaternion());
+        Vector2 球生成位置 = (Player1有球權) ? new Vector2(-6f, 3f) : new Vector2(6f, 3f);
+        Instantiate(Load_from_Resources(Ball_obj), 球生成位置, new Quaternion());
         排球 = FindObjectOfType<Ball>();
         排球預設最大速度 = 排球.最大速度;
 
@@ -38,6 +41,8 @@ public class GameControl : MonoBehaviour {
 
         Player1_text.text = Player1_score.ToString();
         Player2_text.text = Player2_score.ToString();
+
+        結束顯示文字 = 遊戲結束.GetComponent<Text>();
         Instance = this;
         可得分 = true;
 	}
@@ -46,10 +51,9 @@ public class GameControl : MonoBehaviour {
 	void Update () {
         if (遊戲進行中)
         {
+            遊戲結束.SetActive(false);
             New_player1.移動();
-            Player1的名字 = New_player1.名字;
             New_player2.移動();
-            Player2的名字 = New_player2.名字;
             if (排球.檢查得分() && 可得分)
             {
                 加分();
@@ -64,8 +68,14 @@ public class GameControl : MonoBehaviour {
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Backspace))
+            string 誰贏了 = Player1_score == 15 ? "Player 1" : "Player 2";
+            顯示文字 = new AddOnce(顯示文字, 誰贏了);
+            結束顯示文字.text = 顯示文字.輸出文字(結束顯示文字.text);
+            遊戲結束.SetActive(true);
+            if (Input.anyKeyDown)
+            {
                 SceneManager.LoadScene("GameOver");
+            }
         }
         排球.移動();
         排球.檢查碰撞();
@@ -88,11 +98,13 @@ public class GameControl : MonoBehaviour {
         {
             Player2_score += 1;
             Player2_text.text = Player2_score.ToString();
+            Player1有球權 = false;
         }
         else if (排球.水平位置 > 0)
         {
             Player1_score += 1;
             Player1_text.text = Player1_score.ToString();
+            Player1有球權 = true;
         }
     }
 

@@ -13,4 +13,9 @@ public class Player1 : Player{
         this.下鍵 = KeyCode.S;
         this.加速及殺球鍵 = KeyCode.Space;
     }
+
+    public void 移動(int s)
+    {
+        base.移動();
+    }
 }

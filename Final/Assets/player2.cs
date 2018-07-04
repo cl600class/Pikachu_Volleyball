@@ -13,4 +13,6 @@ public class Player2 : Player{
     this.下鍵 = KeyCode.DownArrow;
     this.加速及殺球鍵 = KeyCode.Comma;
     }
+
+
 }

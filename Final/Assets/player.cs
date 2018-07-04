@@ -24,7 +24,7 @@ public class Player : MonoBehaviour, IMoveable {
     public KeyCode 下鍵;
     public KeyCode 加速及殺球鍵;
 
-    public void 移動()
+    public virtual void 移動()
     {
         this.水平速度 = this.玩家.velocity.x;
         if (!(是地板 && Input.GetKey(加速及殺球鍵)))

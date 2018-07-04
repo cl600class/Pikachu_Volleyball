@@ -16,24 +16,18 @@ public static class MovementExtension {
             Vector2 平殺球;
             Vector2 下殺球;
             float 殺球力 = 45f;
+            float 上殺球角度;
+            float 下殺球角度;
             Player who;
-            
-            if (目標球.誰碰到球 == "player1")
-            {
-                who = player1;
-                方向 = Vector2.right;
-                平殺球 = 方向;
-                上殺球 = Rotate(方向, 30);
-                下殺球 = Rotate(方向, -45);
-            }
-            else
-            {
-                who = player2;
-                方向 = Vector2.left;
-                平殺球 = 方向;
-                上殺球 = Rotate(方向, -30);
-                下殺球 = Rotate(方向, 45);
-            }
+            bool 是player1要殺球 = 目標球.誰碰到球 == "player1";
+            who = 是player1要殺球 ? (player1 as Player) : (player2 as Player);
+            方向 = 是player1要殺球 ? Vector2.right : Vector2.left;
+            平殺球 = 方向;
+            上殺球角度 = 是player1要殺球 ? 30 : -30;
+            下殺球角度 = 是player1要殺球 ? -45 : 45;
+            上殺球 = Rotate(方向, 上殺球角度);
+            下殺球 = Rotate(方向, 下殺球角度);
+
             if (player!=who)
                 目標球.最大速度 = GameControl.Instance.排球預設最大速度;
             player = who;

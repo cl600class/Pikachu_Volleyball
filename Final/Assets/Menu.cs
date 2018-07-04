@@ -55,6 +55,7 @@ public class Menu : MonoBehaviour {
     public void PreLoad()
     {
         GameControl.遊戲進行中 = true;
+        GameControl.Player1有球權 = true;
         GameControl.Player1_score = 0;
         GameControl.Player2_score = 0;
         GameControl.Ball_obj = BallFactory.Create_ball(1);
