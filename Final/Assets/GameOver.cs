@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Core;
 public class GameOver : MonoBehaviour {
 
 	// Use this for initialization
