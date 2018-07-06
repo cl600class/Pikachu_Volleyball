@@ -14,5 +14,11 @@ namespace Core
         this.下鍵 = KeyCode.DownArrow;
         this.加速及殺球鍵 = KeyCode.Comma;
         }
+
+        //可加入自動移動
+        public void 移動(int s)
+        {
+            base.移動();
+        }
     }
 }
